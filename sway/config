@@ -1,7 +1,7 @@
 set $mod Mod4
 set $hyper Mod1+Mod3
 set $term kitty
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi -show drun
 
 input type:keyboard {
     xkb_layout "us"
@@ -11,11 +11,11 @@ input type:keyboard {
 # Looks
 font pango:DejaVuSansMono Nerd Font Mono
 
-output eDP-1 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output eDP-1 bg ~/.config/sway/wallpaper.png fill
 for_window [class="^.*"] border pixel 0
 smart_borders on
 
-gaps inner 10
+gaps inner 5
 gaps outer 5
 
 # class                 border  backgr. text    indicator
@@ -35,9 +35,9 @@ for_window [class="^[cC]hromium" title="^Save As$"] floating enable, resize set 
 for_window [class="^[cC]hromium" title="^Open File$"] floating enable, resize set 1200 800, move position center
 
 exec swayidle -w \
-  timeout 300 'swaylock -f -c 193549' \
+  timeout 300 'swaylock -f -i ~/.config/sway/lock.png' \
   timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock -f -c 193549'
+  before-sleep 'swaylock -f -i ~/.config/sway/lock.png
 
 # Key shortcuts
 
@@ -54,7 +54,7 @@ bindsym $hyper+f exec zzzfoo -o xdg-open --no-abstract
 
 # Application shortcuts
 bindsym $mod+Return exec $term
-bindsym $hyper+l exec swaylock -f -c 193549
+bindsym $hyper+l exec swaylock -f -i ~/.config/sway/lock.png
 bindsym $hyper+b exec qutebrowser
 bindsym $hyper+a exec pavucontrol
 bindsym $hyper+F11 exec systemctl suspend
@@ -168,13 +168,7 @@ mode "resize" {
 }
 
 # Assign clients to specific workspaces
-#assign [class="code-oss"] $ws1
-#assign [class="Code"] $ws1
-#
-#assign [class="qutebrowser"] $ws2
-#
-#assign [Class="Slack"] $ws2
-#assign [Class="discord"] $ws2
+assign [app_id = "org.qutebrowser.qutebrowser" ] $ws2
 
 
 bar swaybar_command waybar
