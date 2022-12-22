@@ -1,7 +1,8 @@
 return {
-  "nvim-treesitter/nvim-treesitter", 
+  "nvim-treesitter/nvim-treesitter",
+  dependencies = { "p00f/nvim-ts-rainbow" },
   run = ":TSUpdate",
-  config = function ()
+  config = function()
     require("nvim-treesitter.configs").setup({
       ensure_installed = "all",
       sync_install = false,
