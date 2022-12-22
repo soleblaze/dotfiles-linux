@@ -13,3 +13,4 @@ vim.opt.runtimepath:prepend(lazypath)
 
 require("settings")
 require("lazy").setup("plugins")
+require("map")
