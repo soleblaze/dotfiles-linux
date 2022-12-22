@@ -7,14 +7,14 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- hop
-map("n", "<leader>s", "<cmd>HopWord<cr>")
-map("n", "<leader>l", "<cmd>HopLine<cr>")
-map("n", "<leader>/", "<cmd>HopPattern<cr>")
-
--- Resize iwndows
+-- Resize windows
 map("n", "<Left>", "<cmd>5winc <<cr>")
 map("n", "<Right>", "<cmd>5winc ><cr>")
+
+-- treeTS
+map("n", "gm", "<cmd>TSJToggle<cr>")
+map("n", "gs", "<cmd>TSJSplit<cr>")
+map("n", "gj", "<cmd>TSJJoin<cr>")
 
 -- barbar
 map("n", "<C-n>", "<cmd>BufferNext<cr>")
@@ -31,13 +31,10 @@ map("n", "<leader>8", "<cmd>BufferGoto 8<CR>")
 map("n", "<leader>9", "<cmd>BufferGoto 9<CR>")
 
 -- other
-map("i", "<F4>", "<C-o><cmd>noh<cr>")
 map("i", "<F7>", "<C-o><cmd>set spell!<cr>")
 map("i", "<F8>", "<C-o><cmd>set list!<cr>")
 map("i", "<F9>", '<C-o><cmd>lua require"toggle_cmp".toggle_completion()<cr>')
 map("n", "<C-s>", "<cmd>w<cr>")
-map("n", "<F2>", "<cmd>set wrap!<cr>")
-map("n", "<F4>", "<cmd>noh<cr>")
 map("n", "<F7>", "<cmd>set spell!<cr>")
 map("n", "<F8>", "<cmd>set list!<cr>")
 map("n", "<F9>", '<cmd>lua require"toggle_cmp".toggle_completion()<cr>')
@@ -47,19 +44,16 @@ map("n", "<leader>P", '"+P')
 map("n", "<leader>d", "<cmd>bdelete!<cr>")
 map("n", "<leader>p", '"+p')
 map("n", "<leader>rv", "<cmd>source $MYVIMRC<cr>")
+map("n", "<leader>y", '"+y', { noremap = false })
 map("n", "ZZ", "<cmd>wqa!<cr>")
 map("v", "<C-s>", "<Esc><cmd>w<cr>")
-
+map("v", "<leader>y", '"+y')
 
 -- window movement
 map("n", "<C-h>", "<cmd>wincmd h<cr>")
 map("n", "<C-j>", "<cmd>wincmd j<cr>")
 map("n", "<C-k>", "<cmd>wincmd k<cr>")
 map("n", "<C-l>", "<cmd>wincmd l<cr>")
-
--- yank
-map("v", "<leader>y", ":OSCYank<cr>")
-map("n", "<leader>y", "<Plug>OSCYank", { noremap = false })
 
 -- neotest
 map("n", "[t", '<cmd>lua require("neotest").jump.prev({ status = "failed" })<CR>')
@@ -68,8 +62,6 @@ map("n", "]t", '<cmd>lua require("neotest").jump.next({ status = "failed" })<CR>
 -- glow
 map("n", "<leader>m", "<cmd>Glow<cr>")
 map("n", "<C-w>z", "<C-w>|<C-w>_")
-
--- other
 
 -- LSP
 map("n", "<leader>h", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
