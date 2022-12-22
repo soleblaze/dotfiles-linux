@@ -9,11 +9,12 @@ input type:keyboard {
 }
 
 # Looks
-font pango:DejaVuSansMono Nerd Font Mono
+font pango:DejaVu Sans Mono Nerd Font Mono 10
 
 output eDP-1 bg ~/.config/sway/wallpaper.png fill
 default_border none
 smart_borders on
+hide_edge_borders --i3 smart
 
 gaps inner 5
 gaps outer 5
