@@ -14,7 +14,7 @@ setopt nonomatch
 setopt noshwordsplit
 setopt prompt_subst
 
-epxort SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export BAT_THEME="cobalt2"
 export BROWSER="qutebrowser"
 export EDITOR="nvim"
