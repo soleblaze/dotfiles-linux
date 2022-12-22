@@ -12,7 +12,7 @@ input type:keyboard {
 font pango:DejaVuSansMono Nerd Font Mono
 
 output eDP-1 bg ~/.config/sway/wallpaper.png fill
-for_window [class="^.*"] border pixel 0
+default_border none
 smart_borders on
 
 gaps inner 5
@@ -23,16 +23,6 @@ client.focused          #214561 #0088ff #ffffff #0088ff
 client.focused_inactive #214561 #214561 #a6a6a6 #214561
 client.unfocused        #214561 #214561 #a6a6a6 #214561
 client.urgent           #1F4662 #ff0900 #ffffff #ff0900
-
-#make notifications behave
-for_window [instance="Download"] floating enable
-for_window [title="Menu Update"] floating enable
-
-# Set specific windows as floating
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Blueman-manager"] floating enable
-for_window [class="^[cC]hromium" title="^Save As$"] floating enable, resize set 1200 800, move position center
-for_window [class="^[cC]hromium" title="^Open File$"] floating enable, resize set 1200 800, move position center
 
 exec swayidle -w \
   timeout 300 'swaylock -f -i ~/.config/sway/lock.png' \
@@ -169,7 +159,6 @@ mode "resize" {
 
 # Assign clients to specific workspaces
 assign [app_id = "org.qutebrowser.qutebrowser" ] $ws2
-
 
 bar swaybar_command waybar
 
