@@ -6,7 +6,7 @@ return {
     },
     config = function()
 
-      local cobalt2 = require("lualine.themes.cobalt2")
+      local cobalt2 = require("lualine.themes.cobalt2custom")
 
       vim.g.bufferline = {
         closable = true,

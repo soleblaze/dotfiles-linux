@@ -14,3 +14,5 @@ vim.opt.runtimepath:prepend(lazypath)
 require("settings")
 require("lazy").setup("plugins")
 require("map")
+
+vim.cmd("source ~/.config/nvim/vim/colors.vim")
