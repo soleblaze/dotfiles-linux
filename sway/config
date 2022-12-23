@@ -1,7 +1,7 @@
 set $mod Mod4
 set $hyper Mod1+Mod3
 set $term kitty
-set $menu wofi -show drun
+set $menu wofi --show drun
 
 input type:keyboard {
     xkb_layout "us"
@@ -116,11 +116,11 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Workspace Names
-set $ws1 "1Term"
-set $ws2 "2Web"
-set $ws3 "3Comms"
-set $ws4 "4Media"
-set $ws5 "5Other"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -160,7 +160,10 @@ mode "resize" {
 
 # Assign clients to specific workspaces
 assign [app_id = "org.qutebrowser.qutebrowser" ] $ws2
+assign [app_id = "discord" ] $ws3
 
 bar swaybar_command waybar
 
 include /etc/sway/config.d/*
+
+exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
