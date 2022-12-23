@@ -1,7 +1,7 @@
 set $mod Mod4
 set $hyper Mod1+Mod3
 set $term kitty
-set $menu wofi --show drun
+set $menu fuzzel
 
 input type:keyboard {
     xkb_layout "us"
