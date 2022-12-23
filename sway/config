@@ -39,17 +39,19 @@ bindsym XF86AudioMute exec ~/.config/i3/pacvol.sh toggle
 bindsym XF86MonBrightnessUp exec light -A 2
 bindsym XF86MonBrightnessDown exec light -U 2
 bindsym Print exec --no-startup-id scrot -e 'mv $f ~/pictures/screenshots/ 2>/dev/null'
-bindsym $mod+x exec --no-startup-id ~/bin/rofi-taskw.sh >/tmp/taskw 2>&1
-bindsym $mod+p exec --no-startup-id ~/bin/rofi-pin.sh
 bindsym $hyper+f exec zzzfoo -o xdg-open --no-abstract
 
 # Application shortcuts
-bindsym $mod+Return exec $term
-bindsym $hyper+l exec swaylock -f -i ~/.config/sway/lock.png
-bindsym $hyper+b exec qutebrowser
-bindsym $hyper+a exec pavucontrol
 bindsym $hyper+F11 exec systemctl suspend
 bindsym $hyper+F12 exec systemctl poweroff
+bindsym $hyper+a exec pavucontrol
+bindsym $hyper+b exec qutebrowser
+bindsym $hyper+l exec swaylock -f -i ~/.config/sway/lock.png
+bindsym $mod+Return exec $term
+bindsym $mod+backslash exec clipman pick -t CUSTOM --tool-args="fuzzel -d"
+bindsym $mod+bracketleft exec ~/bin/fuzzel-readlater
+bindsym $mod+p exec ~/bin/fuzzel-pin
+bindsym $mod+x exec ~/bin/fuzzel-task
 
 floating_modifier $mod normal
 
