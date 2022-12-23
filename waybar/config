@@ -1,0 +1,135 @@
+{
+  "layer": "top",
+  "fixed-center": false,
+  "margin": "5 5 0 5",
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-right": [
+    "custom/cpu",
+    "cpu",
+    "custom/temp",
+    "temperature",
+    "custom/mem",
+    "memory",
+    "custom/disk",
+    "disk",
+    "custom/network",
+    "network",
+    "custom/battery",
+    "battery",
+    "custom/audio",
+    "wireplumber",
+    "custom/clock",
+    "clock",
+    "idle_inhibitor",
+    "tray"
+  ],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "format": "{icon}",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "format-icons": {
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  },
+  "custom/cpu": {
+    "format": "",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "{usage}%"
+  },
+  "custom/temp": {
+    "format": "",
+    "tooltip": false
+  },
+  "temperature": {
+    "format": "{temperatureC}°"
+  },
+  "custom/mem": {
+    "format": "",
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 30,
+    "format": "{}%",
+    "max-length": 10
+  },
+  "custom/disk": {
+    "format": "",
+    "tooltip": false
+  },
+  "disk": {
+    "interval": 30,
+    "format": "{free}",
+    "path": "/"
+  },
+  "custom/network": {
+    "format": "直",
+    "tooltip": false
+  },
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%)",
+    "format-ethernet": "Ethernet",
+    "format-disconnected": "",
+    "tooltip-format": "Up: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}\nIP: {ipaddr}",
+    "tooltip-format-wifi": "Up: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}\nIP: {ipaddr}",
+    "tooltip-format-ethernet": "Up: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}\nIP: {ipaddr}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "custom/battery": {
+    "format": "",
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% ({power}W)",
+    "format-charging": "{capacity}% ({power}W)",
+    "format-plugged": "{capacity}% ({power}W)",
+    "format-alt": "{time} ({power}W)",
+    "tooltip-format": "{time}"
+  },
+  "custom/audio": {
+    "format": "",
+    "tooltip": false
+  },
+  "wireplumber": {
+    "format": "{volume}%",
+    "format-muted": "MUTE",
+    "on-click": "helvum"
+  },
+  "custom/clock": {
+    "format": "",
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%I:%M}",
+    "tooltip-format": "{:%a, %d. %b}"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 5
+  }
+}
