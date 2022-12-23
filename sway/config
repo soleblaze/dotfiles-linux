@@ -50,6 +50,7 @@ bindsym $hyper+l exec swaylock -f -i ~/.config/sway/lock.png
 bindsym $mod+Return exec $term
 bindsym $mod+backslash exec clipman pick -t CUSTOM --tool-args="fuzzel -d"
 bindsym $mod+bracketleft exec ~/bin/fuzzel-readlater
+bindsym $mod+bracketright exec clipman clear -t CUSTOM --tool-args="fuzzel -d"
 bindsym $mod+p exec ~/bin/fuzzel-pin
 bindsym $mod+x exec ~/bin/fuzzel-task
 
