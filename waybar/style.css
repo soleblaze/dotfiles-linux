@@ -71,14 +71,14 @@ button:hover {
 }
 
 #custom-cpu,
-#custom-mem,
-#custom-network {
+#custom-mem {
   color: #ffffff;
   background-color: #808080;
   padding: 0 10px;
   font-size: 16px;
 }
 
+#custom-network,
 #custom-audio {
   color: #ffffff;
   background-color: #808080;
