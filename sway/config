@@ -163,6 +163,10 @@ mode "resize" {
 # Assign clients to specific workspaces
 assign [app_id = "org.qutebrowser.qutebrowser" ] $ws2
 assign [app_id = "discord" ] $ws3
+assign [class = "1Password" ] $ws4
+
+# Float Specific apps
+for_window [app_id = "pavucontrol"] floating enable
 
 bar swaybar_command waybar
 
