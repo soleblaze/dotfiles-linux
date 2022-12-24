@@ -50,12 +50,17 @@ button:hover {
 #backlight,
 #network,
 #pulseaudio,
-#wireplumber,
 #tray,
 #mode,
 #scratchpad,
 #mpd {
     padding: 0 10px;
+    color: #ffffff;
+    background-color: #275D84;
+}
+
+#wireplumber {
+    padding: 0 0px 0 10px;
     color: #ffffff;
     background-color: #275D84;
 }

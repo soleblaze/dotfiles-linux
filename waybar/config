@@ -20,10 +20,9 @@
     "battery",
     "custom/audio",
     "wireplumber",
-    "custom/clock",
-    "clock",
+    "tray",
     "idle_inhibitor",
-    "tray"
+    "clock"
   ],
   "sway/workspaces": {
     "disable-scroll": true,
@@ -111,7 +110,7 @@
   "wireplumber": {
     "format": "{volume}%",
     "format-muted": "MUTE",
-    "on-click": "helvum"
+    "on-click": "pavucontrol"
   },
   "custom/clock": {
     "format": "",
