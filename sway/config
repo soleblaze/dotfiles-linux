@@ -33,14 +33,12 @@ exec swayidle -w \
 
 # Key shortcuts
 
-# Update
-bindsym XF86AudioRaiseVolume exec ~/.config/i3/pacvol.sh up
-bindsym XF86AudioLowerVolume exec ~/.config/i3/pacvol.sh down
-bindsym XF86AudioMute exec ~/.config/i3/pacvol.sh toggle
+bindsym XF86AudioRaiseVolume exec pamixer -i 5
+bindsym XF86AudioLowerVolume exec pamixer -d 5
+bindsym XF86AudioMute exec pamixer -t
+
 bindsym XF86MonBrightnessUp exec light -A 2
 bindsym XF86MonBrightnessDown exec light -U 2
-bindsym Print exec --no-startup-id scrot -e 'mv $f ~/pictures/screenshots/ 2>/dev/null'
-bindsym $hyper+f exec zzzfoo -o xdg-open --no-abstract
 
 # Application shortcuts
 bindsym $hyper+F11 exec systemctl suspend
