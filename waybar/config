@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "fixed-center": false,
-  "position": "bottom",
+  "position": "top",
   "modules-left": [
     "sway/workspaces"
   ],
