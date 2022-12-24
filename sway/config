@@ -46,14 +46,14 @@ bindsym $hyper+f exec zzzfoo -o xdg-open --no-abstract
 bindsym $hyper+F11 exec systemctl suspend
 bindsym $hyper+F12 exec systemctl poweroff
 bindsym $hyper+a exec pavucontrol
-bindsym $hyper+b exec qutebrowser
+bindsym $hyper+b exec zsh -c "qutebrowser"
 bindsym $hyper+l exec swaylock -f -i ~/.config/sway/lock.png
 bindsym $mod+Return exec $term
 bindsym $mod+backslash exec clipman pick -t CUSTOM --tool-args="fuzzel -d"
 bindsym $mod+bracketleft exec ~/bin/fuzzel-readlater
 bindsym $mod+bracketright exec clipman clear -t CUSTOM --tool-args="fuzzel -d"
-bindsym $mod+p exec ~/bin/fuzzel-pin
-bindsym $mod+x exec ~/bin/fuzzel-task
+bindsym $mod+p exec zsh -c "~/bin/fuzzel-pin"
+bindsym $mod+x exec zsh -c "~/bin/fuzzel-task"
 
 floating_modifier $mod normal
 
