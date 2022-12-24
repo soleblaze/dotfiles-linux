@@ -20,10 +20,14 @@
     "battery",
     "custom/audio",
     "wireplumber",
-    "tray",
     "idle_inhibitor",
+    "tray",
     "clock"
   ],
+  "custom/line": {
+    "format": " ",
+    "tooltip": false
+  },
   "sway/workspaces": {
     "disable-scroll": true,
     "format": "{icon}",

@@ -53,22 +53,17 @@ button:hover {
 #tray,
 #mode,
 #scratchpad,
+#wireplumber,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
     background-color: #275D84;
 }
 
-#wireplumber {
-    padding: 0 0px 0 10px;
-    color: #ffffff;
-    background-color: #275D84;
-}
-
 #idle_inhibitor {
-    padding: 0 ;
+    padding: 0 8px ;
     color: #ffffff;
-    background-color: #275D84;
+    background-color: #808080;
 }
 
 #custom-battery,
@@ -78,6 +73,12 @@ button:hover {
   color: #ffffff;
   background-color: #808080;
   padding: 0 10px;
+}
+
+#custom-line {
+  color: #ffffff;
+  background-color: #808080;
+  padding: 0 1px;
 }
 
 #custom-cpu,
