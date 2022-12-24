@@ -53,10 +53,15 @@ button:hover {
 #wireplumber,
 #tray,
 #mode,
-#idle_inhibitor,
 #scratchpad,
 #mpd {
     padding: 0 10px;
+    color: #ffffff;
+    background-color: #275D84;
+}
+
+#idle_inhibitor {
+    padding: 0 ;
     color: #ffffff;
     background-color: #275D84;
 }
