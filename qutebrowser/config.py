@@ -67,5 +67,7 @@ c.url.searchengines = {
 config.bind("e", "scroll-page 0 -1")
 config.bind("sp", "set-cmd-text -s :spawn --userscript pin add")
 config.bind("sr", "set-cmd-text -s :spawn --userscript pin readLater")
-config.bind("st", "set-cmd-text -s :spawn --userscript taskadd project:www")
+config.bind("sh", "spawn --userscript fuzzel")
+config.bind("sp", "spawn --userscript qute-1pass")
+config.bind("st", "spawn --userscript taskadd project:www")
 config.load_autoconfig()
