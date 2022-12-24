@@ -45,7 +45,7 @@
     "tooltip": false
   },
   "cpu": {
-    "format": "{usage}%"
+    "format": "{usage:>2}%"
   },
   "custom/temp": {
     "format": "",
@@ -97,9 +97,9 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% ({power}W)",
-    "format-charging": "{capacity}% ({power}W)",
-    "format-plugged": "{capacity}% ({power}W)",
+    "format": "{capacity}% ({power:.1f}W)",
+    "format-charging": "{capacity}% ({power:.1f}W)",
+    "format-plugged": "{capacity}% ({power:.1f}W)",
     "format-alt": "{time} ({power}W)",
     "tooltip-format": "{time}"
   },
