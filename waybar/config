@@ -20,8 +20,9 @@
     "battery",
     "custom/audio",
     "wireplumber",
-    "idle_inhibitor",
+    "custom/tray",
     "tray",
+    "idle_inhibitor",
     "clock"
   ],
   "custom/line": {
@@ -130,6 +131,10 @@
       "activated": "",
       "deactivated": ""
     }
+  },
+  "custom/tray": {
+    "format": "",
+    "tooltip": false
   },
   "tray": {
     "icon-size": 14,
