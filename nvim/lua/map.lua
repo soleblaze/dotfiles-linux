@@ -105,7 +105,7 @@ wk.register({
     c = { "<cmd>Telescope quickfix<cr>", "QuickFix" },
     d = { "<cmd>Telescope diagnostics<cr>", "Diags" },
     f = { "<cmd>Telescope find_files<cr>", "FindFiles" },
-    g = { "<cmd>Telescope git_files<cr>", "GitFiles" },
+    g = { "<cmd>Telescope live_grep<cr>", "LiveGrep" },
     h = { "<cmd>Telescope help_tags<cr>", "HelpTags" },
     i = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "FindInBuffer" },
     j = { "<cmd>Telescope jumplist<cr>", "JumpList" },
