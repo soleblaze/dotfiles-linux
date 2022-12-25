@@ -65,6 +65,7 @@ path+="${CARGO_HOME}/bin"
 path+="${GOPATH}/bin"
 path+="${HOME}/.yarn/bin"
 path+="${XDG_DATA_HOME}/npm/bin"
+path+="${HOME}/.local/share/nvim/mason/bin"
 path=("${HOME}/bin" "${HOME}/.local/bin" "${HOME}/.krew/bin" $path)
 
 for i in ${HOME}/.local/share/gem/ruby/*; do
