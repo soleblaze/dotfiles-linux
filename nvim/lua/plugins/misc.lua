@@ -1,5 +1,6 @@
 return {
   "tpope/vim-fugitive",
   "tpope/vim-unimpaired",
-  "sunaku/vim-dasht"
+  "sunaku/vim-dasht",
+  "vimwiki/vimwiki"
 }

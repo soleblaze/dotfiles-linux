@@ -1,4 +1,3 @@
-
 vim.g.mapleader = " "
 
 vim.opt.autoindent = true
@@ -58,3 +57,7 @@ vim.opt.foldmethod = "expr"
 -- Setup colorcolumn
 vim.opt.colorcolumn = "80"
 vim.cmd("highlight ColorColumn guifg=NONE guibg=#204563 gui=NONE")
+
+-- vimwiki
+vim.g.vimwiki_list = { { path = '~/Dropbox/notes', syntax = 'markdown', ext = '.md' } }
+vim.g.vimwiki_global_ext = 0
