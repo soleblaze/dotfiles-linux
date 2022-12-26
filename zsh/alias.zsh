@@ -58,6 +58,6 @@ alias yau="yay -Su"
 alias bdf="btrfs filesystem df"
 
 # nap aliases
-alias napclip="nap $(nap list | gum filter) | xclip -selection clipboard"
-alias napexec="nap $(nap list | gum filter) | bash"
-alias napsave="gum write | nap $(gum input --placeholder folder/snippet.ext)"
+alias napclip='nap $(nap list | gum filter) | xclip -selection clipboard'
+alias napexec='nap $(nap list | gum filter) | bash'
+alias napsave='gum write | nap $(gum input --placeholder folder/snippet.ext)'
