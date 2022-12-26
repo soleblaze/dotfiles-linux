@@ -1,0 +1,16 @@
+# Configuration
+default_language: bash
+theme: cobalt2
+
+# Colors
+background: "-1"
+foreground: "7"
+primary_color: "#FEFEFE"
+primary_color_subdued: "#1460D2"
+black: "#000000"
+bright_green: "#33ff00"
+bright_red: "#ff0000"
+gray: "#7F7F7F"
+green: "#3ad900"
+red: "#ff2600"
+white: "#fefefe"
