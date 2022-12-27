@@ -4,7 +4,7 @@ return {
     require("zen-mode").setup {
       window = {
         backdrop = 1,
-        width = 90,
+        width = 80,
         options = {
           signcolumn = "no", -- disable signcolumn
           number = false, -- disable number column
