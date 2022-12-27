@@ -56,7 +56,7 @@ c.qt.highdpi = False
 c.zoom.default = "100%"
 c.tabs.background = True
 c.url.searchengines = {
-    "DEFAULT": "https://duckduckgo.com/?q={}",
+    "DEFAULT": "https://www.google.com/search?q={}",
     "aur": "https://aur.archlinux.org/packages/?O=0&K={}",
     "g": "https://www.google.com/search?q={}",
     "p": "https://pinboard.in/search/u:soleblaze?query={}",
