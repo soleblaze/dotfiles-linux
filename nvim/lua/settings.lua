@@ -56,7 +56,7 @@ vim.opt.foldmethod = "expr"
 
 -- Setup colorcolumn
 vim.opt.colorcolumn = "80"
-vim.cmd("highlight ColorColumn guifg=NONE guibg=#204563 gui=NONE")
+vim.cmd("highlight VirtColumn guifg=#204563 guibg=NONE gui=NONE")
 
 -- vimwiki
 vim.g.vimwiki_list = { { path = '~/Dropbox/notes', syntax = 'markdown', ext = '.md' } }
