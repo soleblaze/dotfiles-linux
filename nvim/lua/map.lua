@@ -63,6 +63,10 @@ map("n", "]t", '<cmd>lua require("neotest").jump.next({ status = "failed" })<CR>
 map("n", "<leader>m", "<cmd>Glow<cr>")
 map("n", "<C-w>z", "<C-w>|<C-w>_")
 
+-- ufo
+vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+
 -- LSP
 map("n", "<leader>h", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
 map("n", "<leader>D", "<cmd>Telescope lsp_type_definitions<CR>")

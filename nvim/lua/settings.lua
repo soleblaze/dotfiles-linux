@@ -49,10 +49,11 @@ vim.g.matchparen_insert_timeout = 20
 vim.g.matchparen_timeout = 20
 vim.opt.cursorline = false
 
--- Setup folds
-vim.opt.foldenable = false
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldmethod = "expr"
+-- Setup folds for ufo
+vim.o.foldcolumn = '1'
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 
 -- Setup colorcolumn
 vim.opt.colorcolumn = "80"
