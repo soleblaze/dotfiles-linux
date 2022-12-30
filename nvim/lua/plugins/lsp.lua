@@ -23,6 +23,67 @@ return {
 
     lsp.preset('recommended')
 
+    local cmp = require('cmp')
+
+    local luasnip = require('luasnip')
+    local t = function(str)
+      return vim.api.nvim_replace_termcodes(str, true, true, true)
+    end
+
+    lsp.setup_nvim_cmp({
+      mapping = cmp.mapping.preset.insert({
+        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-e>"] = cmp.mapping.close(),
+        ["<Tab>"] = cmp.mapping(function(fallback)
+          if luasnip.expand_or_jumpable() then
+            vim.fn.feedkeys(t("<Plug>luasnip-expand-or-jump"), "")
+          elseif cmp and cmp.visible() then
+            cmp.select_next_item()
+          else
+            fallback()
+          end
+        end, { "i", "s", }),
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
+          if luasnip.jumpable(-1) then
+            vim.fn.feedkeys(t("<Plug>luasnip-jump-prev"), "")
+          elseif cmp and cmp.visible() then
+            cmp.select_prev_item()
+          else
+            fallback()
+          end
+        end, { "i", "s", }),
+        ["<C-n>"] = cmp.mapping(function(fallback)
+          if cmp and cmp.visible() then
+            cmp.select_next_item()
+          else
+            fallback()
+          end
+        end, { "i", "s", }),
+        ["<C-p>"] = cmp.mapping(function(fallback)
+          if cmp and cmp.visible() then
+            cmp.select_prev_item()
+          else
+            fallback()
+          end
+        end, { "i", "s", }),
+        ["<Down>"] = cmp.mapping(function(fallback)
+          if cmp and cmp.visible() then
+            cmp.select_next_item()
+          else
+            fallback()
+          end
+        end, { "i", "s", }),
+        ["<Up>"] = cmp.mapping(function(fallback)
+          if cmp and cmp.visible() then
+            cmp.select_prev_item()
+          else
+            fallback()
+          end
+        end, { "i", "s", }),
+      })
+    })
+
     lsp.configure('gopls', {
       settings = {
         gopls = {
