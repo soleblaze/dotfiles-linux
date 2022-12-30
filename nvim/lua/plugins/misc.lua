@@ -1,6 +1,7 @@
 return {
+  "sunaku/vim-dasht",
+  "towolf/vim-helm",
   "tpope/vim-fugitive",
   "tpope/vim-unimpaired",
-  "sunaku/vim-dasht",
   "vimwiki/vimwiki"
 }
