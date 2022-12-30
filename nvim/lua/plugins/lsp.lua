@@ -32,9 +32,6 @@ return {
     )
 
     local luasnip = require('luasnip')
-    local t = function(str)
-      return vim.api.nvim_replace_termcodes(str, true, true, true)
-    end
 
     lsp.setup_nvim_cmp({
       mapping = cmp.mapping.preset.insert({
@@ -43,7 +40,7 @@ return {
         ["<C-e>"] = cmp.mapping.close(),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if luasnip.expand_or_jumpable() then
-            vim.fn.feedkeys(t("<Plug>luasnip-expand-or-jump"), "")
+            luasnip.expand_or_jump()
           elseif cmp and cmp.visible() then
             cmp.confirm()
           else
@@ -52,20 +49,24 @@ return {
         end, { "i", "s", }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
           if luasnip.jumpable(-1) then
-            vim.fn.feedkeys(t("<Plug>luasnip-jump-prev"), "")
+            luasnip.jump(-1)
           else
             fallback()
           end
         end, { "i", "s", }),
         ["<C-n>"] = cmp.mapping(function(fallback)
-          if cmp and cmp.visible() then
+          if luasnip.jumpable(1) then
+            luasnip.jump(1)
+          elseif cmp and cmp.visible() then
             cmp.select_next_item()
           else
             fallback()
           end
         end, { "i", "s", }),
         ["<C-p>"] = cmp.mapping(function(fallback)
-          if cmp and cmp.visible() then
+          if luasnip.jumpable(-1) then
+            luasnip.jump(-1)
+          elseif cmp and cmp.visible() then
             cmp.select_prev_item()
           else
             fallback()
@@ -100,7 +101,7 @@ return {
       },
     })
     lsp.configure('yamlls', {
-      on_attach = function(client, bufnr)
+      on_attach = function(_, bufnr)
         if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
           vim.diagnostic.disable(bufnr)
           vim.defer_fn(function()
