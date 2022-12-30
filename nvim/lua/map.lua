@@ -7,6 +7,9 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- neoclip
+map("n", "<leader>n", "<cmd>Telescope neoclip<cr>")
+
 -- Resize windows
 map("n", "<Left>", "<cmd>5winc <<cr>")
 map("n", "<Right>", "<cmd>5winc ><cr>")
