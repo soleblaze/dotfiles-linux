@@ -24,6 +24,12 @@ return {
     lsp.preset('recommended')
 
     local cmp = require('cmp')
+    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+
+    cmp.event:on(
+      'confirm_done',
+      cmp_autopairs.on_confirm_done()
+    )
 
     local luasnip = require('luasnip')
     local t = function(str)
@@ -81,7 +87,11 @@ return {
             fallback()
           end
         end, { "i", "s", }),
+        ["<CR>"] = cmp.mapping(function()
+          cmp.autopairs.on_confirm_done({ map_char = { tex = "" } })
+        end, {}),
       })
+
     })
 
     lsp.configure('gopls', {
