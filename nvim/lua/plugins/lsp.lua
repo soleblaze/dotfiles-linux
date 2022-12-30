@@ -40,12 +40,12 @@ return {
       mapping = cmp.mapping.preset.insert({
         ["<C-d>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-e>"] = cmp.mapping.abort(),
+        ["<C-e>"] = cmp.mapping.close(),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if luasnip.expand_or_jumpable() then
             vim.fn.feedkeys(t("<Plug>luasnip-expand-or-jump"), "")
           elseif cmp and cmp.visible() then
-            cmp.select_next_item()
+            cmp.confirm()
           else
             fallback()
           end
@@ -53,8 +53,6 @@ return {
         ["<S-Tab>"] = cmp.mapping(function(fallback)
           if luasnip.jumpable(-1) then
             vim.fn.feedkeys(t("<Plug>luasnip-jump-prev"), "")
-          elseif cmp and cmp.visible() then
-            cmp.select_prev_item()
           else
             fallback()
           end
