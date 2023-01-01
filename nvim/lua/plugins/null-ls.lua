@@ -1,10 +1,6 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
-  dependencies = { "jayp0521/mason-null-ls.nvim" },
   config = function()
-    require("mason-null-ls").setup({
-      automatic_installation = true,
-    })
     local null_ls = require("null-ls")
     require("null-ls").setup({
       sources = {
