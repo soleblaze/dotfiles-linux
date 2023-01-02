@@ -99,8 +99,8 @@
   },
   "battery": {
     "states": {
-      "warning": 30,
-      "critical": 15
+      "warning": 20,
+      "critical": 10
     },
     "format": "{capacity}% ({power:.1f}W)",
     "format-charging": "{capacity}% ({power:.1f}W)",
