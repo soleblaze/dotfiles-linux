@@ -7,7 +7,7 @@ alias free="free -h"
 alias grep="grep --color -i"
 alias ls="ls --color=always --group-directories-first"
 alias ping='prettyping --nolegend'
-alias vi=nvim
+alias vi=nv
 alias wget=wget --hsts-file="$HOME/.local/share/wget-hsts"
 
 # BTRFS DF alias
