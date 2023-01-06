@@ -19,7 +19,7 @@
     "custom/battery",
     "battery",
     "custom/audio",
-    "wireplumber",
+    "pulseaudio",
     "custom/tray",
     "tray",
     "idle_inhibitor",
@@ -112,7 +112,7 @@
     "format": "",
     "tooltip": false
   },
-  "wireplumber": {
+  "pulseaudio": {
     "format": "{volume}%",
     "format-muted": "MUTE",
     "on-click": "pavucontrol"
