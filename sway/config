@@ -161,9 +161,10 @@ mode "resize" {
 }
 
 # Assign clients to specific workspaces
-assign [app_id = "org.qutebrowser.qutebrowser" ] $ws2
-assign [app_id = "discord" ] $ws3
-assign [class = "1Password" ] $ws4
+assign [app_id = "obsidian" ] $ws2
+assign [app_id = "org.qutebrowser.qutebrowser" ] $ws3
+assign [app_id = "discord" ] $ws4
+assign [class = "1Password" ] $ws5
 
 # Float Specific apps
 for_window [app_id = "pavucontrol"] floating enable
