@@ -46,7 +46,8 @@ bindsym $hyper+F12 exec systemctl poweroff
 bindsym $hyper+a exec pavucontrol
 bindsym $hyper+b exec zsh -c "qutebrowser"
 bindsym $hyper+l exec swaylock -f -i ~/.config/sway/lock.png
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec foot tmux new-session -ADs main
+bindsym $hyper+Return exec foot
 bindsym $mod+backslash exec clipman pick -t CUSTOM --tool-args="fuzzel -d"
 bindsym $mod+bracketleft exec ~/bin/fuzzel-readlater
 bindsym $mod+bracketright exec clipman clear -t CUSTOM --tool-args="fuzzel -d"
@@ -136,6 +137,7 @@ bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
