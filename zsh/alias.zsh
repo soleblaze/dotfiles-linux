@@ -35,7 +35,6 @@ alias catp='bat'
 
 # ssh aliases
 alias scpnh='scp -o "StrictHostKeyChecking no" -o "UserKnownHostsFile /dev/null"'
-alias sshnh='ssh -o "StrictHostKeyChecking no" -o "UserKnownHostsFile /dev/null"'
 
 # dot aliases
 alias -g ...="../.."
