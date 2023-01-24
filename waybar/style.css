@@ -68,10 +68,13 @@ button:hover {
 
 #custom-battery,
 #custom-clock,
-#custom-temp {
+#custom-cpu,
+#custom-mem,
+#custom-temp,
+#custom-tray {
   color: #ffffff;
   background-color: #808080;
-  padding: 0 10px;
+  padding: 0 6px;
 }
 
 #custom-disk {
@@ -80,21 +83,12 @@ button:hover {
   padding: 0 7px;
 }
 
-#custom-tray,
-#custom-mem,
-#custom-cpu {
-  color: #ffffff;
-  background-color: #808080;
-  padding: 0 8px;
-  font-size: 16px;
-}
-
 #custom-network,
 #custom-audio {
   color: #ffffff;
   background-color: #808080;
   padding: 0 8px;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 #window,
